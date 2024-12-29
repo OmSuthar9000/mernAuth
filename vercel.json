@@ -5,17 +5,17 @@
       "use": "@vercel/node"
     },
     {
-      "src": "client/package.json",  // Assuming the client (React) is in the 'client' folder
+      "src": "client/package.json",  
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "client/dist"  // Adjust the path to 'client/dist' (Vite's default build output)
+        "outputDirectory": "client/dist"  
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/client/dist/$1"  // Route frontend requests to the dist folder
+      "dest": "/client/dist/$1"  
     }
   ]
 }
