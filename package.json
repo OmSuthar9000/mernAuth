@@ -1,5 +1,5 @@
 {
-  "name": "crud_user-main",
+  "name": "crud_user_main",
   "version": "1.0.0",
   "scripts": {
     "client:start": "npm run start --prefix client",
