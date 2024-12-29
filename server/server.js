@@ -32,7 +32,7 @@ connectDb();
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Serve React static files
-app.use(express.static(path.join(__dirname, '../client/dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // Define your user routes
 app.use("/api/user", UserRouter);
