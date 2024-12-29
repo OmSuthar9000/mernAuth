@@ -11,8 +11,8 @@ export const getCurrentDir = (url) => path.dirname(fileURLToPath(url));
 export const registerUser = async (req, res) => {
   const form = new IncomingForm();
 
-  // Get the current directory using the helper function
-  const uploadDir = path.join(getCurrentDir(import.meta.url), '../uploads');
+  // Use the /tmp directory on Vercel for file uploads
+  const uploadDir = path.join('/tmp', 'uploads'); // Using /tmp directory
   form.uploadDir = uploadDir; // Set the upload directory
 
   // Ensure the upload folder exists
@@ -38,6 +38,7 @@ export const registerUser = async (req, res) => {
       fs.renameSync(file.filepath, newFilePath);
 
       // Construct the public URL for the file
+      // Note: You may need to use Vercel's public URL or a CDN here
       const publicFilePath = `/uploads/${newFilename}`;
 
       // Hash the password
