@@ -1,0 +1,19 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# React build folder
+/client/dist/
+
+# Express uploads folder (optional)
+/server/uploads/
+
+# Environment files
+.env
+.env.*  # For different environments
+
+# IDE/editor settings
+.vscode/
+.idea/
+.DS_Store
+
