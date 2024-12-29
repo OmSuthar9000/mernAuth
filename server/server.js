@@ -38,7 +38,7 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/user", UserRouter);
 
 // Serve React app for any other route
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
   res.json({"message" : "working"});
 });
 
