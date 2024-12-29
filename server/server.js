@@ -42,5 +42,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
+app.get("/", (req, res) => {
+  res.json({"message":"working"});
+});
 // Start the server
 app.listen(port, () => console.log(`App is running on port: ${port}`));
