@@ -12,7 +12,7 @@ export const registerUser = async (req, res) => {
   const form = new IncomingForm();
 
   // Use the /tmp directory on Vercel for file uploads
-  const uploadDir = path.join('/tmp', 'uploads'); // Using /tmp directory
+  const uploadDir = path.join('tmp', 'uploads'); // Using /tmp directory
   form.uploadDir = uploadDir; // Set the upload directory
 
   // Ensure the upload folder exists
