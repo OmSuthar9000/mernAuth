@@ -1,13 +1,23 @@
 {
-  "name": "crud_user-main",
+  "name": "mern-monorepo",
   "version": "1.0.0",
-  "description": "This is a MERN stack application that allows users to register with their personal information and profile picture. The application provides API endpoints for user registration, viewing user data, updating user data, and deleting users. It also includes a front-end built with React.js for interacting with these APIs.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
-    "start": "cd backend && npm install && node server.js"
+    "client:start": "npm run start --prefix client",
+    "client:build": "npm run build --prefix client",
+    "client:install": "npm install --prefix client",
+    "server:start": "node server/server.js",
+    "server:dev": "nodemon server/server.js",
+    "install": "npm install",
+    "build": "npm run client:build && npm run server:build",
+    "client:build": "npm run build --prefix client",
+    "server:build": "echo 'No build command for server yet'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"  // Useful for backend development
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"  // Runs both client and server in parallel
+  }
 }
