@@ -8,14 +8,14 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "client/dist"  // Ensure this points to the correct folder
+        "outputDirectory": "client/dist"  
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/client/dist/$1"  // Make sure this points to your frontend build directory
+      "dest": "/client/dist/$1"  
     }
   ]
 }
