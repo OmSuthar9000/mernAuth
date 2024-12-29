@@ -5,7 +5,7 @@ const UserCard = ({ user, onEdit, onDelete }) => {
             {/* Profile Picture */}
             <div className="w-1/5 flex justify-center">
                 <img
-                    src={`${import.meta.env.VITE_API_URL}/${user.profilePicture}`}
+                    src={`${import.meta.env.VITE_API_URL}${user.profilePicture}`}
                     alt={`${user.name}'s Profile`}
                     className="w-12 h-12 rounded-full object-cover"
                 />
