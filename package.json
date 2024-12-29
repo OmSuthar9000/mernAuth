@@ -9,8 +9,8 @@
     "server:start": "node server/server.js",
     "server:dev": "nodemon server/server.js",
     "install": "npm install && npm install --prefix client",
-    "build": "npm run client:build",
-    
+    "build": "npm run client:build && npm run server:build",
+    "server:build": "echo 'No build command for server yet'"
   },
   "dependencies": {
     "express": "^4.17.1",
