@@ -32,14 +32,14 @@ connectDb();
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // Serve React static files from the frontend build
-app.use(express.static(path.join(__dirname, '../client/dist')));
+
 
 // Define your user routes
 app.use("/api/user", UserRouter);
 
 // Serve React app for any other route
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/dist', 'index.html'));
+app.get('', (req, res) => {
+  res.json({"message" : "working"});
 });
 
 // Error handling middleware
