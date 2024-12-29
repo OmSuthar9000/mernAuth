@@ -1,7 +1,6 @@
 {
-  "name": "mern-monorepo",
+  "name": "crud_user-main",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "client:start": "npm run start --prefix client",
     "client:build": "npm run build --prefix client",
