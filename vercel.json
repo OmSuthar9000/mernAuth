@@ -1,21 +1,21 @@
 {
   "builds": [
     {
-      "src": "package.json",
+      "src": "server/package.json",
       "use": "@vercel/node"
     },
     {
-      "src": "client/package.json",  
+      "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "outputDirectory": "client/dist"  
+        "outputDirectory": "client/dist"  // Ensure this points to the correct folder
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/client/dist/$1"  
+      "dest": "/client/dist/$1"  // Make sure this points to your frontend build directory
     }
   ]
 }
