@@ -31,21 +31,15 @@ connectDb();
 // Serve static files from the 'uploads' folder
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Serve React static files from the frontend build
-
+// Serve React static files
+app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // Define your user routes
 app.use("/api/user", UserRouter);
 
 // Serve React app for any other route
-app.get('/', (req, res) => {
-  res.json({"message" : "working"});
-});
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something went wrong!');
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 // Start the server
