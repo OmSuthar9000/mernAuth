@@ -6,7 +6,7 @@ npm-debug.log
 /client/dist/
 
 # Express uploads folder (optional)
-/server/uploads/
+
 
 # Environment files
 .env
